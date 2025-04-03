@@ -5,6 +5,9 @@
 This repository contains simple automation test framework written with TypeScript and Playwright and implements Page Object Model Pattern to test https://www.betterroaming.com site.
 
 #####
+Requeriments
+    npm i -D @playwright/test
+#####
 
 Test Case Steps:
 1. Open https://www.betterroaming.com/

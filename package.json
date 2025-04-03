@@ -9,7 +9,7 @@
   "author": "William Melchior Jablonski",
   "license": "MIT",
   "devDependencies": {
-    "@playwright/test": "^1.12.3",
+    "@playwright/test": "^1.51.1",
     "playwright": "^1.12.3"
   }
 }

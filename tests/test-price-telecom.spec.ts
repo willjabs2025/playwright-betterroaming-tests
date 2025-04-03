@@ -19,7 +19,7 @@ import { ScanQRCodePage } from '../pages/4-Scan-QR-code-page';
 test('Given I\'m on page https://www.betterroaming.com/', async ({ page }) => {
     const homepage = new HomePage(page);
 
-    // Given I'm on page https://www.betterroaming.com/
+    // Given Im on page https://www.betterroaming.com/
     await homepage.open();
     // I Check if home page is opened
     await homepage.checkIfHomePageIsOpened();

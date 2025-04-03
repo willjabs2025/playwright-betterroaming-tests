@@ -1,5 +1,6 @@
 import type { Page } from 'playwright';
 import { isVisible } from '../framework/common-actions';
+import { expect } from 'playwright/test';
 
 export class HomePage {
     readonly page: Page;
@@ -11,10 +12,15 @@ export class HomePage {
     async open() {
         await this.page.goto('https://www.betterroaming.com/');
     }
+    // check if is opened
+    async checkIfHomePageIsOpened() {
+        //await this.page.('https://www.betterroaming.com/');
+    }
+
     // 2. Select Euro as currency
     async selectEuroAsCurrency() {
         // Check if elements exists
-        await expect(this.page.getByXpath('/html/body/div[1]/header/div[1]/div[3]/div[2]/astro-island/div/div/div[2]/div/div[2]')).toBeVisible();
+        await expect(this.page.getByText('€')).toBeVisible();
         // Click Currency
         await this.page.click('div[xpath="/html/body/div[1]/header/div[1]/div[3]/div[2]/astro-island/div/div/div[2]/div/div[2]"]');
         // Select Euro
