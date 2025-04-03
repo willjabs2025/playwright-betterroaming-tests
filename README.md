@@ -4,7 +4,7 @@
 
 This repository contains simple automation test framework written with TypeScript and Playwright and implements Page Object Model Pattern to test https://www.betterroaming.com site.
 
-Steps:
+Test Case Steps:
 1. Open https://www.betterroaming.com/
 2. Select Euro as currency
 3. Click on Thailand
