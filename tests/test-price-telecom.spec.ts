@@ -14,6 +14,7 @@ test('When I\'m on page https://www.betterroaming.com/', async ({ page }) => {
     // Then Check that the third plan has following values: Country: Thailand, Data: 5GB, Valid: 30 days, Plan type: data only, Price 11,79 €.
     await homepage.open();
     // check home page is opened
+    
     await homepage.goToLoginPage();
     //Select Euro as currency
     await new LanguageCurrencyPage(page).login(user.email, user.password)
@@ -27,7 +28,7 @@ test('When I\'m on page https://www.betterroaming.com/', async ({ page }) => {
     
 
     // When I select the plan 
-    
+
     // Then ScanQRCode page is opened
     const userIsLoggedOut = await new ScanQRCodePage(page).userIsLoggedOut();
     expect(userIsLoggedOut).toBeTruthy();

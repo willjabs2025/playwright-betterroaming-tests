@@ -1,4 +1,5 @@
 export const mobilePlan = {
+    currency: '€',
     country: 'Thailand',
     data: '5GB',
     valid: '30 days',

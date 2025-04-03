@@ -7,9 +7,9 @@ export class LanguageCurrencyPage {
         this.page = page;
     }
 
-    async login(email: string, password: string) {
-        await this.page.type('input[formcontrolname="email"]', email);
-        await this.page.type('input[formcontrolname="password"]', password);
-        await this.page.click('button[type="submit"]');
+    async selectCurrency(currency: string) {
+        //await this.page.type('input[formcontrolname="email"]', email);
+        //await this.page.type('input[formcontrolname="password"]', password);
+        await this.page.click('text[type="'+currency+'"]');
     }
 }
