@@ -26,18 +26,18 @@ test('Given I\'m on page https://www.betterroaming.com/', async ({ page }) => {
     
   });
 
-  test('When I Select Euro as currency', async ({ page }) => {
+  test('When I Select '+mobilePlan.currency+' as currency', async ({ page }) => {
      //Select Euro as currency
      await new LanguageCurrencyPage(page).selectCurrency(mobilePlan.currency)
   });
 
-  test('And Click on Thailand', async ({ page }) => {
+  test('And Click on Country '+mobilePlan.country, async ({ page }) => {
         // And Click on Thailand
         const homepage = new HomePage(page);
         await homepage.fillAndSelectCountry(mobilePlan.country);
   });
 
-  test('Then Check that the third plan has following values: Country: Thailand, Data: 5GB, Valid: 30 days, Plan type: data only, Price 11,79 €.', async ({ page }) => {
+  test('Then Check that the third plan has following values: Country: '+mobilePlan.country+', Data: '+mobilePlan.data+', Valid: '+mobilePlan.valid+', Plan type: '+mobilePlan.plan_type+', Price '+mobilePlan.price+'.', async ({ page }) => {
      // Then Check that the third plan has following values: Country: Thailand, Data: 5GB, Valid: 30 days, Plan type: data only, Price 11,79 €.
      await new PlanPage(page).checkPlanValues(mobilePlan.country, mobilePlan.data, mobilePlan.valid, mobilePlan.plan_type, mobilePlan.price);
     
