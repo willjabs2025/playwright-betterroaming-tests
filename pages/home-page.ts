@@ -21,7 +21,8 @@ export class HomePage {
     } 
     */
     //3. Click on Thailand
-    async clickOnCountry() {
-        await this.page.click('a[routerlink="/settings"]');
+    async fillAndSelectCountry() {
+        //await this.page.type('input[formcontrolname="email"]', email);
+        await this.page.type('input[xpath="/html/body/main/div[3]/div/astro-island/div/section/div/div[1]/div/div[1]/div/input"]', "Thailand");
     }
 }
