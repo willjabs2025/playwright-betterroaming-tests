@@ -11,7 +11,7 @@ export class LogoutPage {
     async userIsOnPlanPage(): Promise<boolean> {
         return isVisible(this.page, 'div[xpath="/html/body/main/div[3]/div/astro-island/div/section/div/div[3]/div[1]/div[1]/p"]');
     }
-    
+    // check data of plan
     async checkPlanValues() {
         //check data of plan - Country: Thailand
         const locator = page.locator('.title');
