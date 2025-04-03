@@ -7,7 +7,7 @@
     "test": "npx playwright test"
   },
   "author": "William Melchior Jablonski",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@playwright/test": "^1.12.3",
     "playwright": "^1.12.3"

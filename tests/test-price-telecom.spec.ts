@@ -6,9 +6,7 @@ import { LanguageCurrencyPage } from '../pages/2-language-currency-navigation-pa
 import { PlanPage } from '../pages/3-plans-esim-thailand-page';
 import { ScanQRCodePage } from '../pages/4-Scan-QR-code-page';
 
-test('Given I\'m on page https://www.betterroaming.com/', async ({ page }) => {
-    const homepage = new HomePage(page);
-    //----- feature: Check if the plan is correct
+//----- feature: Check if the plan is correct
     // Scenario: Check if the plan is correct
     //
     // Given I’m on page https://www.betterroaming.com/
@@ -18,7 +16,10 @@ test('Given I\'m on page https://www.betterroaming.com/', async ({ page }) => {
     //-----
     //#
 
-    // When I'm on page https://www.betterroaming.com/
+test('Given I\'m on page https://www.betterroaming.com/', async ({ page }) => {
+    const homepage = new HomePage(page);
+
+    // Given I'm on page https://www.betterroaming.com/
     await homepage.open();
     // I Check if home page is opened
     await homepage.checkIfHomePageIsOpened();
