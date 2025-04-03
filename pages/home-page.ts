@@ -11,16 +11,17 @@ export class HomePage {
     async open() {
         await this.page.goto('https://www.betterroaming.com/');
     }
-
-    async goToLoginPage() {
+    // 2. Select Euro as currency
+    async selectEuroAsCurrency() {
         await this.page.click('a[routerlink="/login"]');
     }
-
+    /*
     async userIsLoggedIn(): Promise<boolean> {
         return await isVisible(this.page, 'a[routerlink="/editor"]');
     } 
-
-    async goToSettings() {
+    */
+    //3. Click on Thailand
+    async clickOnCountry() {
         await this.page.click('a[routerlink="/settings"]');
     }
 }
