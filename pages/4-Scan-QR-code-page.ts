@@ -7,7 +7,8 @@ export class SettingsPage {
         this.page = page;
     }
 
-    async logout() {
-        await this.page.click('.btn-outline-danger');
+    async CheckTextScanQRcodetogetyourFREEeSIMnowExists!() {
+        //await this.page.click('.btn-outline-danger');
+        //Scan QR code to get your FREE eSIM now!
     }
 }
