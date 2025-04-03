@@ -1,12 +1,12 @@
 {
-  "name": "playwright-page-object",
+  "name": "playwright-betterroaming-tests",
   "version": "1.0.0",
-  "description": "Page Object Model with playwright",
+  "description": "Simple automation test framework of betterroaming.com. Using Page Object Model implementation with Playwright",
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test"
   },
-  "author": "Andrii Baidachenko",
+  "author": "William Melchior Jablonski",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.12.3",
