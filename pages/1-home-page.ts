@@ -13,6 +13,8 @@ export class HomePage {
     }
     // 2. Select Euro as currency
     async selectEuroAsCurrency() {
+        // Check if elements exists
+        await expect(page.getByXpath('/html/body/div[1]/header/div[1]/div[3]/div[2]/astro-island/div/div/div[2]/div/div[2]')).toBeVisible();
         // Click Currency
         await this.page.click('div[xpath="/html/body/div[1]/header/div[1]/div[3]/div[2]/astro-island/div/div/div[2]/div/div[2]"]');
         // Select Euro
