@@ -8,7 +8,10 @@ import { ScanQRCodePage } from '../pages/4-Scan-QR-code-page';
 
 test('User can login and logout', async ({ page }) => {
     const homepage = new HomePage(page);
-    
+    // When I'm on page https://www.betterroaming.com/
+    // And I Select Euro as currency
+    // And Click on Thailand
+    // Then Check that the third plan has following values: Country: Thailand, Data: 5GB, Valid: 30 days, Plan type: data only, Price 11,79 €.
     await homepage.open();
     await homepage.goToLoginPage();
     await new LanguageCurrencyPage(page).login(user.email, user.password)
