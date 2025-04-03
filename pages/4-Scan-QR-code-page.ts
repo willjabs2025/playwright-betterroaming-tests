@@ -8,7 +8,7 @@ export class SettingsPage {
     }
 
     async CheckTextScanQRcodetogetyourFREEeSIMnowExists!() {
-        //await this.page.click('.btn-outline-danger');
-        //Scan QR code to get your FREE eSIM now!
+        //Check text "Scan QR code to get your FREE eSIM now!" exists
+        await expect(this.page.getByText('Scan QR code to get your FREE eSIM now!')).toBeVisible();
     }
 }
