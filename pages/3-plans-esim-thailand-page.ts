@@ -12,23 +12,23 @@ export class PlanPage {
         return isVisible(this.page, 'div[xpath="/html/body/main/div[3]/div/astro-island/div/section/div/div[3]/div[1]/div[1]/p"]');
     }
     // check data of plan
-    async checkPlanValues(country: String, data: string, valid: string, plan_type: string, price: string) {
+    async checkPlanValues(country: String, dataVolume: string, valid: string, plan_type: string, price: string) {
         
             
         //check data of plan - Country: Thailand
-        const locator = this.page.locator('.title');
-        await expect(locator).toContainText('Thailand');
+        const locator = this.page.locator('.country');
+        await expect(locator).toContainText(country);
         //check data of plan -  Data: 5GB
-        const locator = this.page.locator('.title');
-        await expect(locator).toContainText('5GB');
+        const locator = this.page.locator('.data');
+        await expect(locator).toContainText(dataVolume);
         //check data of plan - Valid: 30 days
-        const locator = this.page.locator('.title');
-        await expect(locator).toContainText('30 days');
+        const locator = this.page.locator('.valid');
+        await expect(locator).toContainText(valid);
         //check data of plan - Plan type: data only
-        const locator = this.page.locator('.title');
-        await expect(locator).toContainText('data only');
+        const locator = this.page.locator('.plan-type');
+        await expect(locator).toContainText(plan_type);
         //check data of plan - Price 11,79 €
-        const locator = this.page.locator('.title');
-        await expect(locator).toContainText('11,79 €');
+        const locator = this.page.locator('.price');
+        await expect(locator).toContainText(price);
     }
 }
