@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-import { user } from './testdata';
+import { mobilePlan } from './testdata';
 import { HomePage } from '../pages/home-page';
 import { LoginPage } from '../pages/login-page';
 import { SettingsPage } from '../pages/settings-page';
