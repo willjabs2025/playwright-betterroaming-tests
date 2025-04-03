@@ -1,6 +1,6 @@
 import type { Page } from 'playwright';
 
-export class LoginPage {
+export class LanguageCurrencyPage {
     readonly page: Page;
 
     constructor(page: Page) {

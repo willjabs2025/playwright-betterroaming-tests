@@ -2,7 +2,7 @@ import type { Page } from 'playwright';
 import { isVisible } from '../framework/common-actions';
 //import { mobilePlan } from './testdata';
 
-export class LogoutPage {
+export class PlanPage {
     readonly page: Page;
 
     constructor(page: Page) {
