@@ -8,7 +8,7 @@ export class LogoutPage {
         this.page = page;
     }
 
-    async userIsLoggedOut(): Promise<boolean> {
+    async userIsOnPlanPage(): Promise<boolean> {
         return isVisible(this.page, 'a[routerlink="/login"]');
     }
 }
