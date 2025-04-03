@@ -4,6 +4,8 @@
 
 This repository contains simple automation test framework written with TypeScript and Playwright and implements Page Object Model Pattern to test https://www.betterroaming.com site.
 
+#####
+
 Test Case Steps:
 1. Open https://www.betterroaming.com/
 2. Select Euro as currency
@@ -19,6 +21,7 @@ Price 11,79 €
 Our prices are updated often. In case the price is different, please use the current price in
 your assertion.
 
+######
 If you want to run test locally, please follow these steps:
 
 1. Clone this repository
