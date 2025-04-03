@@ -13,7 +13,11 @@ export class HomePage {
     }
     // 2. Select Euro as currency
     async selectEuroAsCurrency() {
-        await this.page.click('a[routerlink="/login"]');
+        // Click Currency
+        await this.page.click('div[xpath="/html/body/div[1]/header/div[1]/div[3]/div[2]/astro-island/div/div/div[2]/div/div[2]"]');
+        // Select Euro
+        await this.page.click('div[xpath="/html/body/div[4]/div[3]/div/div[3]/div[2]"]');
+        
     }
     /*
     async userIsLoggedIn(): Promise<boolean> {
