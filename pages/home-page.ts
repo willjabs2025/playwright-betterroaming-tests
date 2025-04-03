@@ -9,7 +9,7 @@ export class HomePage {
     }
 
     async open() {
-        await this.page.goto('http://angular.realworld.io/');
+        await this.page.goto('https://www.betterroaming.com/');
     }
 
     async goToLoginPage() {
