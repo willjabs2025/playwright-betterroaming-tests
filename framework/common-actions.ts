@@ -19,6 +19,8 @@ export async function executeWithTestData(testData: any, testFunction: Function)
     }
 }
 */
+  // Multiple test data possible solution // v2
+/*
 const testData = [{
     name:"test1",
     url:"https://www.youtube.com"
@@ -43,3 +45,5 @@ test(`MyTest ${data.name}`, async ({ page}) => {
     }); 
 
 })
+
+*/
