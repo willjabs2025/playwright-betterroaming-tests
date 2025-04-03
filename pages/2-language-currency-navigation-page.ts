@@ -1,4 +1,5 @@
 import type { Page } from 'playwright';
+import { expect } from 'playwright/test';
 
 export class LanguageCurrencyPage {
     readonly page: Page;
@@ -8,8 +9,12 @@ export class LanguageCurrencyPage {
     }
 
     async selectCurrency(currency: string) {
-        //await this.page.type('input[formcontrolname="email"]', email);
-        //await this.page.type('input[formcontrolname="password"]', password);
-        await this.page.click('text[type="'+currency+'"]');
+        //
+        //await this.page.click('text[type="'+currency+'"]');
+        //
+        await this.page.getByText('$', { exact: true }).click();
+        await expect(this.page.getByRole('dialog')).toContainText('Euro - €');
+        await this.page.getByText('Euro - €').click();
+        await expect(this.page.getByRole('banner')).toContainText('€');
     }
 }

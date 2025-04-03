@@ -31,5 +31,21 @@ export class PlanPage {
         //check data of plan - Price 11,79 €
         const locatorprice = this.page.locator('.price');
         await expect(locatorprice).toContainText(price);
+
+        // wait for the page to load
+        await this.page.waitForTimeout(2000);
+        await expect(this.page.getByRole('main')).toContainText('Thailand');
+        await expect(this.page.getByRole('main')).toContainText('Countries');
+        await expect(this.page.getByRole('main')).toContainText('Thailand');
+        await expect(this.page.getByRole('main')).toContainText('Data');
+        await expect(this.page.getByRole('main')).toContainText('5 GB');
+        await expect(this.page.getByRole('main')).toContainText('Valid');
+        await expect(this.page.getByRole('main')).toContainText('30 DAYS');
+        await expect(this.page.getByRole('main')).toContainText('Plan type');
+        await expect(this.page.getByRole('main')).toContainText('Data only');
+        await expect(this.page.getByRole('main')).toContainText('€10.99');
+        // wait for the page to load (is testing so fast)
+        await this.page.waitForTimeout(1000);
+        await this.page.getByText('Access Plan').nth(2).click();
     }
 }
